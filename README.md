@@ -1,4 +1,13 @@
-# Edge Flow
+```
+                     ███████╗██████╗  ██████╗ ███████╗    ███████╗██╗      ██████╗ ██╗    ██╗
+                     ██╔════╝██╔══██╗██╔════╝ ██╔════╝    ██╔════╝██║     ██╔═══██╗██║    ██║
+                     █████╗  ██║  ██║██║  ███╗█████╗      █████╗  ██║     ██║   ██║██║ █╗ ██║
+                     ██╔══╝  ██║  ██║██║   ██║██╔══╝      ██╔══╝  ██║     ██║   ██║██║███╗██║
+                     ███████╗██████╔╝╚██████╔╝███████╗    ██      ███████╗╚██████╔╝╚███╔███╔╝
+                     ╚══════╝╚═════╝  ╚═════╝ ╚══════╝    ╚═╝     ╚══════╝ ╚═════╝  ╚══╝╚══╝
+```
+**Watching/streaming web-series or movies, all cozy and packed on your bed lying down (maybe in the dark), it gets difficult to reach the brightness and volume keys. Edge flow makes that struggle go away. You can now control the volume and brightness just using the trackpad.**
+
 
 A small macOS menu-bar app (personal use). While media is playing:
 
@@ -6,13 +15,6 @@ A small macOS menu-bar app (personal use). While media is playing:
 - **Two fingers sliding up/down on the left edge** → **built-in display brightness**
 
 Everywhere else the trackpad behaves normally. No account, no network, no telemetry.
-
-> **Read this first: this code has not been compiled or run.**
-> It was written on a Linux machine with no Swift toolchain, so nothing here has been built, type-checked or tested
-> on a Mac. It is written carefully and the pure logic has unit tests, but expect that `swift build` may report a
-> few compiler errors on the first try. If it does, the fixes are normally one-liners; paste the first errors back
-> to me and I will correct them. The hardware parts (trackpad, brightness, haptics, media detection) also depend
-> on undocumented Apple frameworks that have to be checked on your actual Mac: run the probe (below) first.
 
 ## Requirements
 
@@ -128,4 +130,4 @@ touch sequences (zones, thresholds, dominance, third finger, cooldown, smoothing
 The manual hardware checklist is `docs/TEST_PLAN.md`.
 
 ---
-| Note: Windows and linux versions are coming soon
+> **Note: Windows and linux versions are coming soon**
