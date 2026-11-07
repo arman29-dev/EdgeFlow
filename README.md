@@ -105,16 +105,6 @@ scripts/                       build_app.sh, probe.sh, test.sh
 docs/                          design documents written before the code (see "Differences" below)
 ```
 
-## Differences from the design documents in `docs/`
-
-The documents were written before the code. Where they disagree, **the code is the truth**:
-
-- Build system is Swift Package Manager plus `scripts/build_app.sh`, not an Xcode project.
-- Music/Spotify detection uses their distributed notifications, not AppleScript, so **no Automation permission** is needed.
-- The optional MediaRemote/Perl adapter for Now Playing is **not included**.
-- The modifier fallback is fixed to Control+Option (+Shift for brightness); not selectable.
-- Touch frames allocate a small array per frame (about 60-100 Hz); this was kept for clarity over zero-allocation.
-
 ## Known limitations
 
 - Uses two **undocumented** Apple frameworks (MultitouchSupport for touch positions, DisplayServices for brightness). A macOS update can break either; the affected feature then shows as unsupported and the app keeps running.
@@ -136,3 +126,6 @@ The documents were written before the code. Where they disagree, **the code is t
 touch sequences (zones, thresholds, dominance, third finger, cooldown, smoothing, caps, rate limiting), the media gate
 (unknown stays closed, debounce, override), the CoreAudio activity rules, and haptic boundary logic.
 The manual hardware checklist is `docs/TEST_PLAN.md`.
+
+---
+| Note: Windows and linux versions are coming soon
