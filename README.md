@@ -1,4 +1,4 @@
-# Trackpad Edge Gestures
+# Edge Flow
 
 A small macOS menu-bar app (personal use). While media is playing:
 
