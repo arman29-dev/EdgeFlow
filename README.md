@@ -22,8 +22,8 @@ Everywhere else the trackpad behaves normally. No account, no network, no teleme
 ## Build and run (about 2 minutes)
 
 ```bash
-unzip TrackpadEdgeGestures.zip
-cd TrackpadEdgeGestures
+unzip EdgeFlow.zip
+cd EdgeFlow
 
 # 1. Run the unit tests (pure logic, no hardware):
 scripts/test.sh
@@ -33,10 +33,10 @@ scripts/probe.sh
 
 # 3. Build the app and install it to ~/Applications:
 scripts/build_app.sh --install
-open ~/Applications/TrackpadEdgeGestures.app
+open ~/Applications/EdgeFlow.app
 ```
 
-Prefer Xcode? `open Package.swift`, choose the `TrackpadEdgeGestures` scheme, press Run. (Launch at Login only works from the built `.app`.)
+Prefer Xcode? `open Package.swift`, choose the `EdgeFlow` scheme, press Run. (Launch at Login only works from the built `.app`.)
 
 A gesture icon appears in the menu bar (no Dock icon). Open **Settings…** from its menu.
 
@@ -46,8 +46,8 @@ macOS ties Accessibility / Input Monitoring permissions to the app's code signat
 ad-hoc signature, which changes on every rebuild, so macOS would forget the permission each time.
 
 1. Open **Keychain Access → Certificate Assistant → Create a Certificate…**
-2. Name: `TrackpadEdgeGestures Dev`, Identity Type: *Self Signed Root*, Certificate Type: *Code Signing*, create it.
-3. Build with it: `SIGN_IDENTITY="TrackpadEdgeGestures Dev" scripts/build_app.sh --install`
+2. Name: `EdgeFlow Dev`, Identity Type: *Self Signed Root*, Certificate Type: *Code Signing*, create it.
+3. Build with it: `SIGN_IDENTITY="EdgeFlow Dev" scripts/build_app.sh --install`
 
 ## What the probe tells you
 
@@ -99,7 +99,7 @@ If the state is unknown or unavailable, gestures stay **off**.
 ```
 Package.swift
 Sources/TEGCore/               pure logic: settings, gesture state machine, media gate, haptic policy (unit tested)
-Sources/TrackpadEdgeGestures/  the app: menu bar, settings UI, CoreAudio, private-framework adapters, HUD
+Sources/EdgeFlow/  the app: menu bar, settings UI, CoreAudio, private-framework adapters, HUD
 Tests/TEGCoreTests/            unit tests
 scripts/                       build_app.sh, probe.sh, test.sh
 docs/                          design documents written before the code (see "Differences" below)
@@ -117,8 +117,8 @@ docs/                          design documents written before the code (see "Di
 
 ## Uninstall
 
-1. Menu bar icon → Quit. 2. Turn off *Launch at Login* first (menu or Settings). 3. Delete `~/Applications/TrackpadEdgeGestures.app`.
-4. `defaults delete local.trackpadedgegestures` 5. Remove it from Privacy & Security → Accessibility / Input Monitoring.
+1. Menu bar icon → Quit. 2. Turn off *Launch at Login* first (menu or Settings). 3. Delete `~/Applications/EdgeFlow.app`.
+4. `defaults delete local.EdgeFlow` 5. Remove it from Privacy & Security → Accessibility / Input Monitoring.
 
 ## Tests
 

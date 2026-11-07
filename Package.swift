@@ -2,16 +2,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "TrackpadEdgeGestures",
+    name: "EdgeFlow",
     platforms: [.macOS("14.2")],
     products: [
-        .executable(name: "TrackpadEdgeGestures", targets: ["TrackpadEdgeGestures"])
+        .executable(name: "EdgeFlow", targets: ["EdgeFlow"])
     ],
     targets: [
         // Pure, hardware-free logic (settings, gesture state machine, media gate, haptic policy).
         .target(name: "TEGCore"),
         // The macOS app: menu bar, private-framework adapters, CoreAudio, UI.
-        .executableTarget(name: "TrackpadEdgeGestures", dependencies: ["TEGCore"]),
+        .executableTarget(name: "EdgeFlow", dependencies: ["TEGCore"]),
         .testTarget(name: "TEGCoreTests", dependencies: ["TEGCore"]),
     ]
 )

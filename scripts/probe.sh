@@ -3,4 +3,4 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 swift build -c release
-"$(swift build -c release --show-bin-path)/TrackpadEdgeGestures" --probe
+"$(swift build -c release --show-bin-path)/EdgeFlow" --probe

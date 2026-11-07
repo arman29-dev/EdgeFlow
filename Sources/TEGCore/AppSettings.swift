@@ -112,7 +112,7 @@ public struct SettingsStorage {
     public let defaults: UserDefaults
     public let key: String
 
-    public init(defaults: UserDefaults = .standard, key: String = "TrackpadEdgeGestures.settings.v1") {
+    public init(defaults: UserDefaults = .standard, key: String = "EdgeFlow.settings.v1") {
         self.defaults = defaults
         self.key = key
     }

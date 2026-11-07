@@ -2,7 +2,7 @@ import AppKit
 import ApplicationServices
 import TEGCore
 
-/// `TrackpadEdgeGestures --probe`: prints what works on THIS Mac, so nothing has to be taken on faith.
+/// `EdgeFlow --probe`: prints what works on THIS Mac, so nothing has to be taken on faith.
 /// Run it from Terminal (macOS attributes permissions to Terminal in that case) while touching the trackpad.
 func runProbes() {
     print("== Trackpad Edge Gestures: hardware probe ==")

@@ -7,7 +7,7 @@ import TEGCore
 /// after a macOS update), `start()` reports `.unavailable` and the rest of the app keeps working.
 ///
 /// UNVERIFIED on the target Mac: the struct layout offsets below, the state values, and the y direction.
-/// Run `TrackpadEdgeGestures --probe` to check them.
+/// Run `EdgeFlow --probe` to check them.
 final class MultitouchProvider {
     private typealias CreateListFn = @convention(c) () -> Unmanaged<CFArray>?
     private typealias IsBuiltInFn = @convention(c) (UnsafeMutableRawPointer) -> Bool

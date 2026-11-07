@@ -1,13 +1,13 @@
 #!/bin/bash
-# Builds TrackpadEdgeGestures.app from the Swift package.
+# Builds EdgeFlow.app from the Swift package.
 #   scripts/build_app.sh              build into ./build/
 #   scripts/build_app.sh --install    also copy to ~/Applications
 #   SIGN_IDENTITY="My Cert" scripts/build_app.sh     sign with a stable identity (recommended, see README)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-APP_NAME="TrackpadEdgeGestures"
-BUNDLE_ID="local.trackpadedgegestures"
+APP_NAME="EdgeFlow"
+BUNDLE_ID="local.EdgeFlow"
 VERSION="1.0.0"
 CONFIG="${CONFIG:-release}"
 IDENTITY="${SIGN_IDENTITY:--}"
